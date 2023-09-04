@@ -13,10 +13,10 @@
     canvas.width= window.innerWidth;
     canvas.height= window.innerHeight;
 
-    ctx.storkeStyle='#BADA55';
+    ctx.strokeStyle='#BADA55';
     ctx.lineJoin='round';
     ctx.lineCap='round';
-    ctx.lineWdith= 100;
+    ctx.lineWidth= 100;
 
     let isDrawing = false;
     let lastX = 0;
@@ -28,7 +28,7 @@
         if(!isDrawing) return;
 
         console.log(e);
-        ctx.storkeStyle=`hsl(${hue},100%,50%)`;
+        ctx.strokeStyle=`hsl(${hue},100%,50%)`;
         ctx.beginPath();
 
         ctx.moveTo(lastX, lastY);
@@ -41,13 +41,13 @@
         if(hue>=360){
             hue =0;
         }
-        if(ctx.lineWdith >=100|| ctx.lineWdith <=1) {
+        if(ctx.lineWidth >=100 || ctx.lineWidth <=1) {
             direction = !direction;
         }
         if (direction) {
-            ctx.lineWdith++;
-        }else{
-            ctx.lineWdith--;
+            ctx.lineWidth++;
+        } else {
+            ctx.lineWidth--;
         }
 
         console.log(hue);
@@ -60,8 +60,8 @@
     });
 
     canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('movesup', ()=> isDrawing = false);
-    canvas.addEventListener('mocesout', ()=>isDrawing=false);
+    canvas.addEventListener('mouseup', ()=> isDrawing = false);
+    canvas.addEventListener('mouseout', ()=>isDrawing=false);
 
 
 </script>
