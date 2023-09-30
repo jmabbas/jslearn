@@ -1,0 +1,266 @@
+@media (max-width: 400px) {
+	.mobile-landing-iframe .da-block,
+	.mobile-landing-iframe .product-categories-list .categories,
+	.mobile-landing-iframe .mobile-handheld-department ul.nav,
+	.mobile-landing-iframe .show-nav .nav,
+	.mobile-landing-iframe .products-list.v2 ul.products,
+	.mobile-landing-iframe .home-mobile-v2-features-block .features-list{
+		    overflow: hidden;
+	}
+	
+	.mobile-landing-iframe:not(.admin-bar) .mobile-header-v2,
+	.mobile-landing-iframe:not(.admin-bar) .mobile-header-v1{
+		padding-top: 40px;
+	}
+	
+.mobile-landing-iframe .site-footer {
+	  padding-bottom: 0;
+}
+}
+
+.header-v5 .electro-navigation .departments-menu-v2-title {
+    color: #131313;
+}
+
+.custom-post .vc_gitem-animated-block {
+    position: relative;
+}
+.custom-post .vc_gitem-animated-block .vc_gitem-zone {
+    position: absolute;
+    width: 100%;
+}
+
+.custom-post .vc_gitem-animated-block + .vc_gitem-zone {
+    background-color: transparent !important;
+}
+
+.custom-post  .vc_custom_heading.vc_gitem-post-data.vc_gitem-post-data-source-post_title {
+    color: #fff;
+	  padding-top: 37%;
+}
+
+.custom-post .vc_btn3-container.vc_btn3-left,
+.custom-post .vc_custom_heading.vc_gitem-post-data.vc_gitem-post-data-source-post_excerpt {
+    display: none;
+}
+
+.header-icon .header-icon-counter {
+	color: #131313;
+}
+
+.custom-post  .vc_custom_heading.vc_gitem-post-data.vc_gitem-post-data-source-post_title h4 {
+    text-align: center !important;
+	font-weight: 800;
+}
+
+.custom-post .vc_gitem-animated-block .vc_gitem-zone::after {
+    height: 100%;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: -webkit-linear-gradient(top,rgba(240,47,23,0) -40%,#000 150%);
+    background: linear-gradient(to bottom,rgba(240,47,23,0) -40%,#000 150%);
+}
+
+.single-post .post-author-info,
+article.post .entry-header .entry-meta span.posted-on,article.post .entry-header .entry-meta span.author,article.post .entry-header .entry-meta span:after {
+	display: none;
+}
+
+.blog .media-attachment img {
+    width: 300px;
+}
+
+.cust-footer-blk .wpb_text_column .cust-head {
+	font-size: 35px;
+}
+
+.cust-footer-blk .wpb_text_column .cust-sub {
+	font-size: 22px;
+}
+.cust-footer-blk .wpb_text_column {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	padding-top: 200px;
+		padding-bottom: 10px;
+	position: relative;
+
+}
+
+.cust-footer-blk .wpb_single_image .vc_figure a:after {
+content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #3d3d3d;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.cust-footer-blk .wpb_text_column .wpb_wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.cust-footer-blk-imgs h2 {
+    text-align: center;
+	font-size: 26px;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	position: absolute;
+	 position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	z-index:2
+}
+
+.cust-footer-blk-img {
+	position: relative;
+}
+
+.cust-footer-blk-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #3d3d3d;
+    opacity: .25;
+}
+
+div.wpforms-container-full.ec-newsletter-form,
+.home .site-content ,
+.cust-footer-blk-imgs .wpb_single_image {
+	margin: 0;
+}
+.cust-footer-blk-img:hover:before {
+   opacity: .8;
+}
+
+div.wpforms-container-full.ec-newsletter-form .wpforms-form input[type=email] {
+    height: 47px;
+}
+
+.owl-item>.product .price del, .products>.product .price del {
+    position: initial !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #0C0D5F !important;
+}
+
+.vc_masonry_grid.custom-post h4{
+	color: #fff  !important;
+}
+
+blockquote {
+    border-color: #e4e4e4;
+    border-width: 1px 0;
+    border-style: solid;
+    padding: 30px 0;
+    margin-bottom: 27.5px;
+    font-size: 18px;
+    color: #6d6d6d;
+}
+
+a,
+#tab-specification table tr td, #tab-specification table tr th, #tab-specification table.shop_attributes tr td, #tab-specification table.shop_attributes tr th,
+.form-select, body .dokan-form-control:not(input):not(textarea), select,
+.navbar-search .search-categories>select,
+.evc-testimonials .evc-t-author-label,
+.evc-predefined-style .evc-shortcode p,
+body, p {
+    font-size: 16px;
+}
+
+.header-site-branding+.off-canvas-navigation-wrapper {
+    margin-left: 10px;
+}
+
+.cust-footer-blk-imgs h2,.footer-newsletter .newsletter-title {
+	color: #fff !important;
+}
+
+.custom-products-widget ul.products{
+	flex-direction: column ;
+}
+
+.custom-products-widget ul .product {
+	width: 100%;
+}
+
+.custom-products-widget .products>.product:hover .product-inner {
+	position: initial;	
+		    box-shadow: none;
+}
+
+
+.custom-products-widget .product-short-description,
+.custom-products-widget .products>.product:hover .hover-area,
+.custom-products-widget .products>.product::after,
+.custom-products-widget .product-loop-footer .add-to-cart-wrap,
+.custom-products-widget .products>.product .product-loop-body .product-sku,
+.custom-products-widget .products>.product .product-loop-body .product-rating,
+.custom-products-widget .product-item__header .woocommerce-loop-product__title,
+.custom-products-widget .products>.product .loop-product-categories {
+display: none;
+}
+.custom-products-widget .product-inner {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 !important;
+}
+
+.custom-products-widget .product-item__header {
+	width: 40%;
+}
+
+.custom-products-widget .product-loop-footer {
+	margin-left: 45%;
+}
+
+.custom-products-widget .products>.product .product-thumbnail>img {
+    width: 80%;
+}
+
+.custom-products-widget .products>.product .product-loop-body {
+	display: block;
+	padding-left: 10px;
+	width: 55%;
+}
+
+.custom-products-widget .products>.product .product-thumbnail {
+ margin-bottom: 0;
+}
+
+.custom-products-widget .products>.product .price {
+    font-size: 16px;
+}
+
+.custom-products-widget .products>.product {
+	margin-bottom: 10px;
+}
+
+
+@media (max-width: 1200px) {
+.site-content .sidebar {
+		position: initial !important;
+		width: 100% !important;
+		visibility: visible;
+		opacity: 1;
+		order: 2;
+	  margin-bottom: 20px;
+	}
+	.handheld-sidebar-toggle {
+    display: none;
+}
+}
