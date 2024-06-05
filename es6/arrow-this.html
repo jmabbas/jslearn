@@ -61,20 +61,20 @@
   </div>
   <script>
     const box = document.querySelector('.box');
+  
     box.addEventListener('click', function() {
-        let first = 'opening';
-        let last = 'open';
+      let first = 'opening';
+      let last = 'open';
 
-        if(this.classList.contains(first)) {
-            [first, last] = [last,first];
-        }
+      if(this.classList.contains(first)) {
+        [first,last] = [last,first];
+      }
 
-        console.log(this);
+      this.classList.toggle(first);
 
-        this.classList.toggle(first);
-        setTimeout(() => {
-            this.classList.toggle(last);
-        },500);
+      setTimeout(()=> {
+        this.classList.toggle(last);
+      },250);
     });
     
   </script>
