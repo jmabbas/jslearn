@@ -12,8 +12,93 @@
 
         const setence = `my name is ${name} and my age is ${age*2}`;
 
+        const person = {
+            name : 'raj',
+            job : 'webdev',
+            city : 'chennai',
+            bio : 'tttest',
+        };
 
-        console.log(setence);
+        const markup = `
+            <div>name ${person.name}</div>
+        `;
+        document.body.innerHTML = markup;
+        
+        const dogs = [{
+            name : 'snickers', 
+            age : '10',
+        },{
+            name : 'hugo', 
+            age : '15',
+        },
+        {
+            name : 'jane', 
+            age : '18',
+        }
+    ];
+
+    const markup1 = `
+        <ul>
+            ${dogs.map(dog => 
+                `<li>${dog.name} in ${dog.age}</li>`
+            ).join('')},
+        </ul>
+    `;
+
+    document.body.innerHTML= markup1;
+
+    const song = {
+        name : 'raj',
+        artist : 'song',
+    };
+
+    const markup2 = `
+    <div>
+        ${song.name} is ${song.artist}
+
+
+        ${song.featuring ? `(featuring - ${song.featuring})` : ''}
+
+    </div>
+    `;
+        
+    document.body.innerHTML = markup2;
+
+    const beer = {
+        name : 'raja',
+        age : '18',
+        keywords : ['place','clooudy','food']
+    };
+
+    function renderKeywords(keywords) {
+        return `<ul>
+            ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+            </ul>` 
+    }
+
+    const markup3 = ` <div>
+        ${beer.name} is ${beer.age}
+        ${renderKeywords(beer.keywords)}
+        </div>
+    `;
+    document.body.innerHTML= markup3;
+
+    function highligh(strings,...values) {
+        let str = '';
+
+        strings.forEach((string, i)=> {
+            str += `${string}  <span style="color:red;">${values[i] || ''}</span>`;
+       
+        });
+        return str;
+    }
+    const names  = 'hugo';
+    const ages = '100' ;
+    
+    const setence1 = highligh`my dogs name ${names} and age ${ages} old`;
+
+    document.body.innerHTML = setence1;
+
     </script>
 </body>
 </html>
