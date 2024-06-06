@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bio">
+    </div>
+    <script>
+        const dist = {
+            HTML : 'Hyper text markup',
+            CSS : 'Cascading Style Sheets',
+            JS : 'JavaScript'
+        };
+
+        function addAbbreviation(strings, ...values){
+            const abbreviated = values.map(value=> {
+                if(dist[value]){
+                    return `<abbr title="${dist[value]}">${value}</abbr>`;
+                }
+                return value;
+            });
+            console.log(abbreviated);
+            return strings.reduce((sentence, string, i)=>{
+                return `${sentence}${string}${abbreviated[i] || ''}`;
+            },'');
+        }
+        
+        const first = 'Md';
+        const last = 'ab';
+
+        const sentence = addAbbreviation`Hello my name ${first} and last ${last} then ${'HTML'} worsk ${'CSS'} study ${'JS'}`;
+
+        const bio = document.querySelector('.bio');
+        const p = document.createElement('p');
+
+        p.innerHTML = sentence;
+
+        bio.appendChild(p);
+    </script>
+</body>
+</html>
