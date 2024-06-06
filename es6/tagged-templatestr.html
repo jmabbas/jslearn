@@ -6,7 +6,9 @@
 </head>
 <body>
     <div class="bio">
+        
     </div>
+    <div class="bio1"></div>
     <script>
         const dist = {
             HTML : 'Hyper text markup',
@@ -37,7 +39,21 @@
 
         p.innerHTML = sentence;
 
-        bio.appendChild(p);
+        bio.appen(p);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
+    <script>
+        const firstn ='jna';
+        const aboutme = `I love to do evil <img src="http://unsplash.it/100/100?random" onload="alert('you got hacked');" />`;
+
+        const html1 =`
+        ${firstn}
+        ${aboutme}
+        `;
+
+        const bio1= document.querySelector('.bio1');
+        bio1.innerHTML= DOMPurify.sanitize(html1);
     </script>
 </body>
 </html>
