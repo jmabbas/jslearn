@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Tabs Based on Content</title>
+    
+</head>
+<body>
+    <div class="masvideos-tabs person-credits-tabs">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#tab-667d493c17e5dcast1" data-toggle="tab" class="nav-link">All</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab-667d493c17e5dcast" data-toggle="tab" class="nav-link active show">Movies</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab-667d493c17e5dcrew" data-toggle="tab" class="nav-link">TV Shows</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-667d493c17e5dcast1" class="tab-pane">
+                <div class="person-movies-credits">
+                    <div class="person-cast-movies">
+                        <h2 class="movie-cast-title">Movies Acting</h2>
+                        <div class="person-cast-movie">
+                            <div class="movie-release-year">2017</div>
+                            <a href="http://localhost:8888/vodi/movie/paradigm-lost/">
+                                <h3 class="movie-name">Paradigm Lost</h3>
+                            </a>
+                            <span class="person-role-separator"> - </span>
+                            <span class="person-role">Brother</span>
+                        </div>
+                        <!-- More movie entries... -->
+                    </div>
+                </div>
+                <div class="person-tv-shows-credits">
+                    <div class="person-cast-tv-shows" style="display: flex; flex-direction: column;">
+                        <h2 class="tv-show-cast-title">TV Show Acting</h2>
+                        <div class="person-cast-tv-show">
+                            <div class="tv-show-release-year">-</div>
+                            <a href="http://localhost:8888/vodi/tv-show/vikings/">
+                                <h3 class="tv-show-name">Vikings</h3>
+                            </a>
+                            <span class="person-role-separator"> - </span>
+                            <span class="person-role">ddd</span>
+                        </div>
+                        <!-- More TV show entries... -->
+                    </div>
+                </div>
+            </div>
+            <div id="tab-667d493c17e5dcast" class="tab-pane active show">
+                <div class="person-movies-credits">
+                    <div class="person-cast-movies">
+                        <h2 class="movie-cast-title">Acting</h2>
+                        <div class="person-cast-movie">
+                            <div class="movie-release-year">2017</div>
+                            <a href="http://localhost:8888/vodi/movie/paradigm-lost/">
+                                <h3 class="movie-name">Paradigm Lost</h3>
+                            </a>
+                            <span class="person-role-separator"> - </span>
+                            <span class="person-role">Brother</span>
+                        </div>
+                        <!-- More movie entries... -->
+                    </div>
+                </div>
+            </div>
+            <div id="tab-667d493c17e5dcrew" class="tab-pane">
+                <div class="person-tv-shows-credits">
+                    <div class="person-cast-tv-shows" style="display: flex; flex-direction: column;">
+                        <h2 class="tv-show-cast-title">Acting</h2>
+                        <div class="person-cast-tv-show">
+                            <div class="tv-show-release-year">-</div>
+                            <a href="http://localhost:8888/vodi/tv-show/vikings/">
+                                <h3 class="tv-show-name">Vikings</h3>
+                            </a>
+                            <span class="person-role-separator"> - </span>
+                            <span class="person-role">ddd</span>
+                        </div>
+                        <!-- More TV show entries... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to check if tab content has the required class
+            function hasRequiredContent(tabPane, requiredClass) {
+                return tabPane.querySelector('.' + requiredClass) == null;
+            }
+
+            // Get all tab panes and navigation items
+            const tabPanes = document.querySelectorAll('.tab-content > .tab-pane');
+            const navItems = document.querySelectorAll('.nav > .nav-item');
+
+            // Check the second tab pane (index 1) for "person-cast-movie" class
+            if (hasRequiredContent(tabPanes[1], 'person-cast-movie')) {
+                navItems[1].style.display = 'none'; // Show the second nav item
+            }
+
+            // Check the third tab pane (index 2) for "person-cast-tv-show" class
+            if (hasRequiredContent(tabPanes[2], 'person-cast-tv-show')) {
+                navItems[2].style.display = 'none'; // Show the third nav item
+            }
+        });
+    </script>
+</body>
+</html>

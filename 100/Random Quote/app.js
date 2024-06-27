@@ -44,6 +44,7 @@ const arrayQuote = [
 
 function quoteAuthorClick() {
     let random = Number.parseInt(Math.random() * arrayQuote.length + 1);
+    let random1 = Math.random() * arrayQuote.length + 1;
     quoteConte.innerHTML = `<span>${arrayQuote[random].quote}</span>`;
     quoteAuthor.innerHTML = `<span>${arrayQuote[random].author}</span>`;
 
